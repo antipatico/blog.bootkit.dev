@@ -1,0 +1,21 @@
+{{ $altText := .Get "alt"}}
+{{ $caption := .Get "caption"}}
+{{ $style := .Get "style"}}
+{{ with $.Page.Resources.GetMatch (.Get "name") }}
+  <figure class="bundleimg">
+    <a href="{{.RelPermalink}}" target="_blank">
+      <img
+        srcset='
+          {{ (.Resize "320x webp").RelPermalink }} 320w,
+          {{ (.Resize "600x webp").RelPermalink }} 600w,
+          {{ (.Resize "1200x webp").RelPermalink }} 1200w,
+          {{ .RelPermalink }} 1600w'
+        loading="lazy"
+        decoding="async"
+	src="{{.RelPermalink}}" alt="{{$altText}}" style="{{$style}}"/>
+    </a>
+    <figcaption><p>{{ $caption }}</p></figcaption>
+  </figure>
+{{ else }}
+    {{ errorf "%s:Cannot find image to bundle: \"%s\"" .Position  (.Get "name")}}
+{{ end }}

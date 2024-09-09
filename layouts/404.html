@@ -1,0 +1,7 @@
+{{- define "main" }}
+    {{ $jedi := resources.Get "images/jedi-mindtricks.jpg" }}
+    {{ with $jedi.Resize "600x webp photo"  }}
+      <img style="width: 100%;" src="{{ .RelPermalink }}">
+    {{ end }}
+    <div style="text-align: center; padding: 10pt"><h1>These aren't the droids you are looking for</h1></div>
+{{- end }}{{/* end main */ -}}

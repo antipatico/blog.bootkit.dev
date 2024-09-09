@@ -1,0 +1,176 @@
+baseURL: "https://blog.bootkit.dev"
+title: "/home/antipatico"
+copyright: "Copyleft (Ↄ) 2018-2024, all wrongs reversed."
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: /home/antipatico
+  description: "Security research is fun!"
+  keywords: [Blog, Portfolio, ExploitDevelopment, VulnerabilityResearch, ReverseEngineering]
+  author: "Jacopo Scannella"
+  # author: ["Me", "You"] # multiple authors
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "2 January 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    disableFingerprinting: false
+    favicon: /favicon.ico"
+    favicon16x16: "/images/favicon.png"
+    # favicon32x32: "<link / abs url>"
+    apple_touch_icon: "/images/favicon.png"
+    safari_pinned_tab: "/images/favicon.png"
+
+  label:
+    text: "/home/antipatico"
+    icon: "/images/favicon.png"
+    iconHeight: 35
+
+  # profile-mode
+  # profileMode:
+  #   enabled: false # needs to be explicitly set
+  #   title: ExampleSite
+  #   subtitle: "This is subtitle"
+  #   imageUrl: "<img location>"
+  #   imageWidth: 120
+  #   imageHeight: 120
+  #   imageTitle: my image
+  #   buttons:
+  #     - name: Posts
+  #       url: posts
+  #     - name: Tags
+  #       url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hello World \U0001F44B"
+    Content: "Welcome to my blog. My name is Jacopo and I am cybersecurity professional from Italy. In this blog you will mostly find content on code, exploits, vulnerabilities and funny stories. I tend to not write alot, but I still come back here from time to time. Thanks for visiting \U0001F60E"
+
+  socialIcons:
+    # - name: x
+      # url: "https://x.com/"
+    # - name: stackoverflow
+      # url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/antipatico"
+    - name: linkedin
+      url: "https://linkedin.com/in/jscannella"
+    - name: email
+      url: "mailto:irq.gvxgbbo@bpvgncvgan"
+    - name: rss
+      url: "/sitemap.xml"
+
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: "XYZabc"
+  #   bing:
+  #     SiteVerificationTag: "XYZabc"
+  #   yandex:
+  #     SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # editPost:
+  #   URL: "https://github.com/<path_to_repo>/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    # - identifier: categories
+    #   name: categories
+    #   url: /categories/
+    #   weight: 10
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: friends
+      name: Friends
+      url: /friends/
+      weight: 30
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+  tableOfContents:
+    endLevel: 4
+    startLevel: 1
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+    # respectDoNotTrack: false
+  instagram:
+    disable: true
+    # simple: false
+  twitter:
+    disable: true
+    # enableDNT: false
+    # simple: false
+  vimeo:
+    disable: false
+    enableDNT: true
+    simple: true
+  youtube:
+    disable: false
+    privacyEnhanced: true

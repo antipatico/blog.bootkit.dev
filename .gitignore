@@ -1,0 +1,6 @@
+resources/_gen/
+*.swp
+public/
+.hugo_build.lock
+.vscode
+.direnv

@@ -1,0 +1,9 @@
+/* Center align bundle-image figures and captions */
+figure.bundleimg a img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure.bundleimg figcaption p {
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+{{ $altText := .Get "alt"}}
+{{ $caption := .Get "caption"}}
+{{ with $.Page.Resources.GetMatch (.Get "name") }}
+  <figure class="bundleimg">
+    <a href="{{.RelPermalink}}">
+      <img
+        loading="lazy"
+        decoding="async"
+	src="{{.RelPermalink}}" alt="{{$altText}}"/>
+    </a>
+    <figcaption><p>{{ $caption }}</p></figcaption>
+  </figure>
+{{ else }}
+    {{ errorf "%s:Cannot find animated image to bundle: \"%s\"" .Position  (.Get "name")}}
+{{ end }}
