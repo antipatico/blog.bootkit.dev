@@ -7,3 +7,35 @@ figure.bundleimg a img {
 figure.bundleimg figcaption p {
     text-align: center;
 }
+
+/* Custom CSS */
+
+div.post-content a {
+    color:  rgb(255, 115, 0);    
+}
+
+div.post-content a:visited {
+    color:  rgb(190, 131, 21);    
+}
+
+nav#TableOfContents a {
+    /* color:  rgb(228, 133, 215); */
+    text-decoration: underline;
+}
+
+/* Apply static rainbow colors to each social icon */
+.social-icons a:nth-child(1) svg {
+    stroke: red;
+}
+
+.social-icons a:nth-child(2) svg {
+    stroke: orange;
+}
+
+.social-icons a:nth-child(3) svg {
+    stroke: rgb(199, 199, 54);
+}
+
+.social-icons a:nth-child(4) svg {
+    stroke: rgb(1, 172, 1);
+}
