@@ -2,7 +2,7 @@ baseURL: "https://blog.bootkit.dev"
 title: "/home/antipatico"
 copyright: "Copyleft (Ↄ) 2018-2024, all wrongs reversed."
 paginate: 5
-theme: PaperMod
+theme: ["hugo-notice", "PaperMod"]
 
 enableRobotsTXT: true
 buildDrafts: false

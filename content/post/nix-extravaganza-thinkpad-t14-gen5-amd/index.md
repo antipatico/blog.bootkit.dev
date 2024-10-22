@@ -65,8 +65,9 @@ less miserable.
 
 If you are interested in NixOS, refer to the people I cited above ([IogaMaster](https://www.youtube.com/@IogaMaster), [vimjoyer](https://www.youtube.com/@vimjoyer) and [Misterio77](https://m7.rs/)), they provide amazing content in form of code on GitHub and videos explaining the thought process and details. You can also find a lot of articles online about Nix. Be curious!
 
-[{{<color "orange">}}Source code related to this blog is available HERE{{</color>}}](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/tree/v0.0.1/)
-
+{{<notice tip>}}
+The source code related to this blog is available [here](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/tree/v0.0.1/)
+{{</notice>}}
 # What is Nix? 
 
 _If you are familiar with Nix and NixOS, feel free to skip this section._
@@ -165,7 +166,9 @@ to use this. Yes, you heard that right! [You can install Nix as a service](https
 
 # T14 ath11k_pci WiFi module breaks after hibernation
 
-[{{<color "lightblue">}}Source-code available here{{</color>}}](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/blob/v0.0.1/modules/nixos/services/t14-hibernate/default.nix)
+{{<notice tip>}}
+Source code is available [here](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/blob/v0.0.1/modules/nixos/services/t14-hibernate/default.nix)
+{{</notice>}}
 
 One of the first thing I noticed once I started working on my new T14 was that [hibernating and resuming from hibernation would result in the WiFi not working](https://bugzilla.kernel.org/show_bug.cgi?id=214649) and in the following error:
 
@@ -255,7 +258,9 @@ $ sudo amixer cget numid=2
 amixer: Control default open error: Host is down
 ```
 
-**NOTE**: I was running this as root because I did not want to setup a rule with udev and setup more complex permission on the hardware led interface. Thus, I was planning to create a service running as root.
+{{<notice note>}}
+I was running this as root because I did not want to setup a rule with udev and setup a more complex permission on the hardware led interface. Thus, I was planning to create a service running as root.
+{{</notice>}}
 
 My first thought was that the root user was missing some environment variable to access the user's audio session (which in my case was `pipewire`). After a lot of searching and consulting with LLLMs, I was not able to find the right variable.
 
@@ -289,8 +294,9 @@ Running this script as root, I was able to switch the led status to match the mi
 
 ## First version: acpid
 
-[{{<color "lightblue">}}Source-code available here{{</color>}}](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/blob/v0.0.1/modules/nixos/services/t14-micmuteled/acpid.nix)
-
+{{<notice tip>}}
+Source code is available [here](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/blob/v0.0.1/modules/nixos/services/t14-micmuteled/acpid.nix)
+{{</notice>}}
 The first implementation idea I got was using [acpid](https://wiki.archlinux.org/title/Acpid), a daemon which allows you to hook all kind of events and special buttons, including FN buttons.
 
 For this flake, I decided to go extra fancy and to create a derivation using [writeShellScriptBin](https://github.com/NixOS/nixpkgs/blob/808125fff694e4eb4c73952d501e975778ffdacd/pkgs/build-support/trivial-builders.nix#L225-L250). For non-Nix user still tuning in, a derivation is a build specification that defines how to build and manage a package in the Nix package manager. Using Nix, I am able to create a service which depends on `alsa-utils` and `ripgrep`, while not exposing any of those packages content to the resulting system.
@@ -344,7 +350,9 @@ in
 
 ## Second version: Systemd service
 
-[{{<color "lightblue">}}Source-code available here{{</color>}}](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/blob/v0.0.1/modules/nixos/services/t14-micmuteled/default.nix)
+{{<notice tip>}}
+Source code available [here](https://github.com/antipatico/nixos-thinkpad-t14-gen5-amd-tweaks/blob/v0.0.1/modules/nixos/services/t14-micmuteled/default.nix)
+{{</notice>}}
 
 The previous approach fails to detect mic mute status toggles caused by user actions through the GUI or third-party software, as the acpid-based solution overlooks these changes. I decided to rewrite it as a systemd service, which comes with its own downsides (such as a small lag and supposedly more power consumption) but better represents the real status of the microphone:
 

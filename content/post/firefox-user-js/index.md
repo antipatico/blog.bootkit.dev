@@ -18,8 +18,10 @@ The goal of this renewal was to minimize big tech tracking while still
 preserving Firefox usability, which in my case, comes before any tinfoil
 paranoia.
 
-**NOTE**: this setup is really specific and suits **me**, you should not copy
+{{< notice warning>}}
+This setup is really specific and suits **me**, you should not copy
 and paste it, because, as you will soon see, there is no way of _"opting out"_.
+{{< /notice >}}
 
 # How
 

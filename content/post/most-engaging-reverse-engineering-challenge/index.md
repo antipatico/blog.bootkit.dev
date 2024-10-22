@@ -172,11 +172,14 @@ computed against the mask to then call the right virtual instruction.
 
 To this day, I am still not able to understand how the instructions get decoded 😂
 
-**NOTE:** If you understand the logic of this code block,
-please [contact me!](mailto:antipatico<at>bootkit<dot>dev)
+{{< notice info>}}
+If you understand the logic of this code block please contact me!
+{{< /notice >}}
 
-**{{<color "#578cbf">}}UPDATE{{</color>}}**: I think I may have cracked the code. If so, I will write
+{{< notice note>}}
+**UPDATE**: I think I may have cracked the code. If so, I will write
 a follow up post at some point!
+{{< /notice >}}
 
 On the bright side, I was able to find some strings at the end of the bytecode, containing the
 badboy (`Try Again`), the godboy (`YAYYY`) and what I thought was the start of the flag (`flag{`).
@@ -373,5 +376,7 @@ Thanks Alessio for partercipating in the surprise and the Fiverr coder who creat
 You can download the code and binaries related to this post [here](/misc/most-engaging-re-chall.zip).
 The password is the flag.
 
-**{{<color "red">}}NOTE:{{</color>}}** Even though I have analyzed the target, I did not fully reverse engineered it.\
+{{<notice warning>}}
+Even though I have analyzed the target, I did not fully reverse engineered it.\
 Please be careful if you wish to execute it. If you decide to execute it, do it in a VM.
+{{</notice>}}

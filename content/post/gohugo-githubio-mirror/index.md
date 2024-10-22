@@ -22,7 +22,9 @@ repositories:
 3. `yourhugotheme`: your theme folder in **themes/**, you can fork it if you're
    using a theme made by someone else :).
 
-**NOTE** that all of the above repositories *can* be private, and that's sweet.
+{{< notice note >}}
+All of the above repositories *can* be private and that is sweet.
+{{< /notice >}}
 
 After creating the repositories copy your whole hugo folder in `yourwebsite.com`
 **excluded** `themes/yourhugotheme` and `public/`.
@@ -53,8 +55,10 @@ repositories `Settings` -> `Deploy Keys` and `Add deploy key`.
 
 {{< bundle-image name="deploy-keys.png" >}}
 
-**NOTE** I suggest to add it in Read-Only, you don't want to give the server
+{{< notice warning >}}
+I suggest to add it in Read-Only: you don't want to give the server
 push privileges on your repository.
+{{< /notice >}}
 
 ## Clone everything (not really)
 Clone `yourwebsite.com` on your server **without** the `--recursive` flag
