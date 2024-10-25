@@ -35,8 +35,6 @@ title: "Load (glibc) DWARF debug symbols in Ghidra"
 date: 2024-10-11T15:59:12+02:00
 ---
 
-# Introduction
-
 Today, I was doing a pwning challenge (maybe more on this on a future blog post) and for some stupid reason,
 I wanted to load the glibc of my system on Ghidra. 99% of the times there is no real good reason to load
 glibc on Ghidra.
