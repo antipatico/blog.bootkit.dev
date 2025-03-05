@@ -7,7 +7,7 @@ draft: false
 ---
 Here you can find    a list of links, mostly composed of friends and tools.
 
-<!-- * [0xzeta](https://bsod.dev) - Lamer king /s -->
+{{/*  [0xzeta](https://bsod.dev) - Lamer king /s */}}
 * [Francesco Giordano](https://appsec.space/) - Lamer king /s
 * [Emanuele Picariello](https://youtube.com/@emanuelepicariello) - Hacker entrepeneur spreading knowledge on YouTube.
 * [Alessio Lei](https://nl.linkedin.com/in/alessio-lei-815b35192) - Embedded developer always creating new devices.

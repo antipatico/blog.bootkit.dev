@@ -77,17 +77,7 @@ Nix is a powerful package manager and system configuration tool that brings a un
 In fact, when you want to change your system in Nix, the canon way to do that is by modifying its declarative system configuration file and rebuilding the system with `nixos-rebuild`. Nix's declarative configuration language allows users to describe their entire system setup, making it easy to reproduce environments on different machines.
 
 However, Nix's strengths come with a learning curve. Its unique approach requires users to adopt a new mindset, which can be challenging for those accustomed to traditional package management. The initial setup and configuration can be time-consuming, especially for newcomers. Additionally, while the Nix community is growing, it is still smaller compared to more mainstream systems like Debian or Red Hat, potentially making it harder to find support or documentation for specific issues. Despite these hurdles, Nix offers a compelling solution for those seeking robust, reproducible, and flexible package management and system configuration.
-<!-- 
-## Genesis VM
 
-My (second) adventure in NixOS started in a virtual 
-
-## To configure or to not configure? snowfall-lib
-## disko: file partitioning
-## sops-nix: secrets
-## nix-index-database: apt-file but with pre-built indexes
-## Nix shell for this blog -->
-<!-- # Part 2: NixOS tweaks for ThinkPad T15 Gen 5 AMD issues -->
 # Nix shell for this blog
 Once the basic NixOS was setup, I needed a [Hugo](https://gohugo.io) installation to be able to work on this blog. I think this example is a good example to think about the differences of a traditional Linux distribution and Nix. In a traditional distribution (such as Ubuntu or Arch Linux), you usually have the following alternatives:
 
@@ -160,7 +150,6 @@ Running `hugo` and `dart-sass` in `nix-shell` resulted in the desired versions:
     caption="nix-shell providing a reproducible environment"
     style="max-width:75%">}}
 
-<!-- Details on how to achieve this reproducible environment are in the comments of the `nix-shell` code above. -->
 The amazing thing is that you do not even need NixOS
 to use this. Yes, you heard that right! [You can install Nix as a service](https://nixos.org/download/#download-nix) and use this amazing feature in your favorite operating system! (MacOS is supported as well :P )
 

@@ -12,7 +12,7 @@ minify:
   disableXML: true
   minifyOutput: true
 
-paginator:
+pagination:
   pagerSize: 5
 
 params:
