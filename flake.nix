@@ -8,7 +8,7 @@
   description = "Blog dev environment";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/4f02464258baaf54992debfd010a7a3662a25536";
+    nixpkgs.url = "github:NixOS/nixpkgs/21808d22b1cda1898b71cf1a1beb524a97add2c4";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -20,8 +20,8 @@
       {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            hugo # v0.129.0+extended
-            dart-sass # v1.77.6
+            hugo # v0.141.0+extended
+            dart-sass # v1.83.1
           ];
         };
       });

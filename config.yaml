@@ -1,7 +1,6 @@
 baseURL: "https://blog.bootkit.dev"
 title: "/home/antipatico"
-copyright: "Copyleft (Ↄ) 2018-2024, all wrongs reversed."
-paginate: 5
+copyright: "Copyleft (Ↄ) 2018-2025, all wrongs reversed."
 theme: ["hugo-notice", "PaperMod"]
 
 enableRobotsTXT: true
@@ -12,6 +11,9 @@ buildExpired: false
 minify:
   disableXML: true
   minifyOutput: true
+
+paginator:
+  pagerSize: 5
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
